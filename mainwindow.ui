@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>393</width>
+    <height>417</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>12</y>
+      <width>376</width>
+      <height>241</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>381</width>
+      <height>117</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="open">
+         <property name="text">
+          <string>open</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="reset">
+         <property name="text">
+          <string>reset</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="last">
+         <property name="text">
+          <string>&lt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="next">
+         <property name="text">
+          <string>&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="save">
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>393</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuTransformation">
+    <property name="title">
+     <string>Transformation</string>
+    </property>
+    <addaction name="actionRgb2gray"/>
+    <addaction name="actionlogtransform"/>
+    <addaction name="actioninverse"/>
+    <addaction name="actionHistEq"/>
+    <addaction name="actionColorHistEq"/>
+    <addaction name="actionColorHisteq1"/>
+   </widget>
+   <widget class="QMenu" name="menuSpatial">
+    <property name="title">
+     <string>Spatial</string>
+    </property>
+    <addaction name="actionLinear"/>
+    <addaction name="actionGaussBlur"/>
+    <addaction name="actionBilateralFilter"/>
+    <addaction name="actionMedianFilter"/>
+    <addaction name="actionExpandFilter"/>
+    <addaction name="actionCorrosionFilter"/>
+   </widget>
+   <widget class="QMenu" name="menuAffine">
+    <property name="title">
+     <string>Affine</string>
+    </property>
+    <addaction name="actionTransformation"/>
+   </widget>
+   <widget class="QMenu" name="menuFrequency">
+    <property name="title">
+     <string>Frequency</string>
+    </property>
+    <addaction name="actionFFT"/>
+    <addaction name="actionLP"/>
+    <addaction name="actionHP"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionsave"/>
+    <addaction name="actionReset"/>
+    <addaction name="actionPrevious"/>
+    <addaction name="actionNext1"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuTransformation"/>
+   <addaction name="menuSpatial"/>
+   <addaction name="menuAffine"/>
+   <addaction name="menuFrequency"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionrgbtogray">
+   <property name="text">
+    <string>rgbtogray</string>
+   </property>
+  </action>
+  <action name="actionRgb2gray">
+   <property name="text">
+    <string>actionRgb2gray</string>
+   </property>
+  </action>
+  <action name="actionreverse">
+   <property name="text">
+    <string>reverse</string>
+   </property>
+  </action>
+  <action name="actionlog_tranform">
+   <property name="text">
+    <string>log tranform</string>
+   </property>
+  </action>
+  <action name="actionlogtransform">
+   <property name="text">
+    <string>logtransform</string>
+   </property>
+  </action>
+  <action name="actioninverse">
+   <property name="text">
+    <string>inverse</string>
+   </property>
+  </action>
+  <action name="actionHistEq1">
+   <property name="text">
+    <string>histeq 1</string>
+   </property>
+  </action>
+  <action name="actionHistEq">
+   <property name="text">
+    <string>histeq</string>
+   </property>
+  </action>
+  <action name="actionColorHistEq">
+   <property name="text">
+    <string>color histeq</string>
+   </property>
+  </action>
+  <action name="actionHistgramEqualization">
+   <property name="text">
+    <string>histgram equalization</string>
+   </property>
+  </action>
+  <action name="actioncolor_histeq">
+   <property name="text">
+    <string>color histeq</string>
+   </property>
+  </action>
+  <action name="actionColorHisteq1">
+   <property name="text">
+    <string>color histeq 1</string>
+   </property>
+  </action>
+  <action name="actionLinear">
+   <property name="text">
+    <string>Linear</string>
+   </property>
+  </action>
+  <action name="actionGaussBlur">
+   <property name="text">
+    <string>Gauss Blur</string>
+   </property>
+  </action>
+  <action name="actionBilateralFilter">
+   <property name="text">
+    <string>Bilateal Filter</string>
+   </property>
+  </action>
+  <action name="actionMedianFilter">
+   <property name="text">
+    <string>Median Filter</string>
+   </property>
+  </action>
+  <action name="actionExpandFilter">
+   <property name="text">
+    <string>Expand Filter</string>
+   </property>
+  </action>
+  <action name="actionCorrosionFilter">
+   <property name="text">
+    <string>Corrosion Filter</string>
+   </property>
+  </action>
+  <action name="actionTransformation">
+   <property name="text">
+    <string>Transformation</string>
+   </property>
+  </action>
+  <action name="actionFFT">
+   <property name="text">
+    <string>FFT</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionsave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </action>
+  <action name="actionPrevious">
+   <property name="text">
+    <string>Previous</string>
+   </property>
+  </action>
+  <action name="actionNext1">
+   <property name="text">
+    <string>Next</string>
+   </property>
+  </action>
+  <action name="actionLP">
+   <property name="text">
+    <string>LP </string>
+   </property>
+  </action>
+  <action name="actionHP">
+   <property name="text">
+    <string>HP</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
